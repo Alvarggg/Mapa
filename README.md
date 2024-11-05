@@ -40,9 +40,10 @@ instalar las dependencias
 npm install
 '''
 iniciar la aplicacion
-'''bash
+```bash
 node app.js
-'''
+```
+
 
 
 
