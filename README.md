@@ -32,7 +32,7 @@ Este framework permite la comunicación en tiempo real entre el servidor y los c
 Documentación: Socket.IO
 # Instalacion
 ```bash
-git clone https://github.com/tuusuario/arminton.git
+git clone https://github.com/Alvarggg/Mapa.git
 cd arminton
 ```
 instalar las dependencias
