@@ -31,14 +31,14 @@ Documentación: p5.js
 Este framework permite la comunicación en tiempo real entre el servidor y los clientes, creando una experiencia de juego interactiva y sincronizada en la que los usuarios pueden competir o colaborar en el campo de tiro. Socket.IO maneja eventos de disparo y recarga de personajes en tiempo real, permitiendo una dinámica de juego fluida.
 Documentación: Socket.IO
 # Instalacion
-'''bash
+```bash
 git clone https://github.com/tuusuario/arminton.git
 cd arminton
-''''
+```
 instalar las dependencias
-'''bash
+```bash
 npm install
-'''
+```
 iniciar la aplicacion
 ```bash
 node app.js
