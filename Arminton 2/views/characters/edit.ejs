@@ -1,0 +1,22 @@
+<h1>Editar Personaje</h1>
+<form action="/characters/<%= character.id %>/update" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" value="<%= character.name %>" required><br>
+    <label for="energyLevel">Balas:</label>
+    <input type="number" id="energyLevel" name="energyLevel" value="<%= character.energyLevel %>" required><br>
+    
+    <label for="lifePoints">Cargador:</label>
+    <input type="number" id="lifePoints" name="lifePoints" value="<%= character.lifePoints %>" required><br>
+    
+    <label for="tipoArma" class="form-label">Clase:</label>
+    <select id="tipoArma" name="tipoArma" class="form-select" required>
+        <option value="Pistola" <%= character.tipoArma === 'Pistola' ? 'selected' : '' %>>Pistola</option>
+        <option value="Escopeta" <%= character.tipoArma === 'Escopeta' ? 'selected' : '' %>>Escopeta</option>
+        <option value="Metralleta" <%= character.tipoArma === 'Metralleta' ? 'selected' : '' %>>Metralleta</option>
+    </select>
+
+    <img src="/images/<%= character.tipoArma %>.png" class="img-fluid" alt="Imagen del arma">
+            
+    
+    <button type="submit">Actualizar</button>
+</form>

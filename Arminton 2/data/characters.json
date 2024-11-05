@@ -1,0 +1,38 @@
+[
+  {
+    "id": 4,
+    "name": "es",
+    "energyLevel": 5,
+    "lifePoints": 2,
+    "tipoArma": "Escopeta",
+    "userId": "51ba571e-0ba5-468f-b781-923cb80b6df0",
+    "position": {
+      "x": 215,
+      "y": 330
+    }
+  },
+  {
+    "id": 5,
+    "name": "popopo",
+    "energyLevel": 1,
+    "lifePoints": 1,
+    "tipoArma": "Pistola",
+    "userId": "724dd865-9f4d-45ef-8c2f-3f9fc3a26a74",
+    "position": {
+      "x": 305,
+      "y": 430
+    }
+  },
+  {
+    "id": 6,
+    "name": "papa",
+    "energyLevel": 1,
+    "lifePoints": 1,
+    "tipoArma": "Escopeta",
+    "userId": "ef402e65-4d33-4acd-b7e2-60a554728a67",
+    "position": {
+      "x": 80,
+      "y": 175
+    }
+  }
+]

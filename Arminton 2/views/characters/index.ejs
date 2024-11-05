@@ -1,0 +1,24 @@
+<h1>Armas</h1>
+<a href="/characters/new" class="create-button button">Crear nueva Arma</a>
+<ul class="character-list">
+    <% characters.forEach(character => { %>
+        <li class="character-item">
+            <span class="character-name"><%= character.name %></span>
+            <div class="button-group">
+                
+                <form action="/characters/<%= character.id %>/edit" method="get" class="edit-form">
+                    <button class= "sound-button" aria-label="Editar" type="submit" class="edit-button button">Editar</button>
+                </form>
+                
+                <form action="/characters/<%= character.id %>/delete" method="post" class="delete-form">
+                    <button class= "sound-button" aria-label="Eliminar" type="submit" class="delete-button button">Eliminar</button>
+                </form>
+                
+                <form action="/game/select" method="post" class="character-form">
+                    <input type="hidden" name="characterId" value="<%= character.id %>">
+                    <button class= "sound-button" aria-label="Seleccionar" type="submit" class="select-button button">Seleccionar</button>
+                </form>
+            </div>
+        </li>
+    <% }); %>
+</ul>

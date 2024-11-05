@@ -1,0 +1,166 @@
+/* Fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* Estilos generales para la tabla con un toque futurista */
+table {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+    background-color: #222;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4); /* Sombra con toque cian */
+    border: 3px solid #00ffcc; /* Borde cian vibrante */
+}
+
+/* Encabezado de la tabla */
+table thead {
+    background-color: #00ffcc; /* Color futurista */
+    color: #222;
+    text-transform: uppercase;
+}
+
+table thead th {
+    padding: 15px 20px;
+    font-size: 14px;
+    border-bottom: 3px solid #00ff99;
+}
+
+/* Cuerpo de la tabla */
+table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #333;
+}
+
+table tbody tr:hover {
+    background-color: #444;
+}
+
+table tbody td {
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid #00ffcc; /* Borde cian vibrante */
+}
+
+/* Contenedor para las acciones */
+td form {
+    display: flex; /* Flexbox para alinear en fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 5px; /* Espacio entre botones */
+}
+
+/* Estilo para el campo de texto */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 2px solid #00ffcc; /* Borde futurista */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-right: 10px;
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+    color: #fff;
+    background-color: #333;
+    transition: border-color 0.3s ease;
+    max-width: 220px;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Sombra vibrante */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ffa952; /* Color cálido al enfocar */
+    outline: none;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #00ffcc; /* Fondo futurista */
+    color: #222;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Sombra futurista */
+}
+
+button:hover {
+    background-color: #ffa952;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Botón de retorno */
+.return-button {
+    background-color: #00ffcc;
+    color: #222;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Sombras vibrantes */
+}
+
+.return-button:hover {
+    background-color: #ffa952;
+}
+
+/* Botón para mostrar/ocultar contraseña */
+.toggle-password {
+    background: none;
+    border: none;
+    color: #00ffcc;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Responsive: Pantallas pequeñas */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 12px;
+        border: none;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 2px solid #00ffcc;
+        padding: 10px;
+        box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
+    }
+
+    table tbody td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        font-size: 12px;
+        position: relative;
+        border: none;
+    }
+
+    table tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #00ffcc;
+    }
+
+    .return-button {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,129 @@
+/* Estilo general del formulario con un toque futurista */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 3px solid #0a84ff;
+    border-radius: 10px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #0a84ff;
+}
+
+/* Estilo para los inputs */
+input[type="email"]{
+    width: 80%;
+    padding: 12px; 
+    margin-bottom: 25px;
+    border: 2px solid #0a84ff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+}
+
+input[type="password"] {
+    width: 80%;
+    padding: 12px; 
+    margin-bottom: 25px;
+    border: 2px solid #0a84ff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+}
+
+/* Efecto focus en inputs */
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #33ff99;
+    outline: none;
+    box-shadow: 0 0 15px #33ff99;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #0a84ff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover en botón */
+button:hover {
+    background-color: #33ff99;
+    transform: scale(1.05);
+}
+
+/* Sombra y borde futurista en todos los elementos interactivos */
+input[type="email"],
+input[type="password"],
+button {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8), 0 0 15px #0a84ff;
+}
+
+/* Estilo del checkbox */
+.form-check-input {
+    background-color: #0d0d0d;
+    border: 2px solid #0a84ff;
+    box-shadow: 0 0 10px #0a84ff;
+}
+
+.form-check-input:checked {
+    background-color: #33ff99;
+    border-color: #33ff99;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #0a84ff;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: #33ff99;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+        font-size: 14px; 
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

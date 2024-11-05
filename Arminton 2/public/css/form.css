@@ -1,0 +1,86 @@
+/* Fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* Estilo general del formulario con un toque futurista */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 3px solid #00ffcc; /* Borde vibrante futurista */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #222; /* Fondo oscuro */
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4); /* Sombra con color vibrante */
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+    text-align: center; /* Centrar contenido */
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #00ffcc; /* Color cian futurista */
+}
+
+/* Estilo para los inputs y select */
+input[type="text"],
+input[type="number"],
+select {
+    width: 75%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #00ffcc; /* Borde vibrante */
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+    font-size: 14px;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Sombras internas y externas vibrantes */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #ffa952; /* Color cálido al enfocar */
+    outline: none;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #00ffcc; /* Fondo cian vibrante */
+    color: #222;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Sombras futuristas */
+}
+
+button:hover {
+    background-color: #ffa952; /* Color más claro al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

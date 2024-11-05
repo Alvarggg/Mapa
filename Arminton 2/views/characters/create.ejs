@@ -1,0 +1,20 @@
+<h1>Crear Arma</h1>
+<form action="/characters" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required><br>
+    
+    <label for="energyLevel">Balas:</label>
+    <input type="number" id="energyLevel" name="energyLevel" required><br>
+    
+    <label for="lifePoints">Cargador:</label>
+    <input type="number" id="lifePoints" name="lifePoints" required><br>
+    
+    
+    <label for="tipoArma">Elige tu ByteMon:</label>
+    <select id="tipoArma" name="tipoArma">
+        <option value="Pistola">Pistola</option>
+        <option value="Escopeta">Escopeta</option>
+        <option value="Metralleta">Metralleta</option>
+    </select><br>
+    <button  aria-label="Crear" type="submit">Crear</button>
+</form>

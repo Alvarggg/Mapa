@@ -1,0 +1,36 @@
+<h2>Mapa</h2>
+  <button onclick="location.href='/map'">Ir al Mapa 🗺️</button>
+<% if (character) { %>
+
+    <div class="card p-3 mb-3">
+        <h2 class="card-title">Personaje: <%= character.name %></h2>
+        <img src="/images/<%= character.tipoArma %>.png" class="img-fluid mb-3" alt="Imagen del arma">
+        <p id="energyLevel" class="lead">Número de balas: <%= character.energyLevel %> ⚡️</p>
+        <div class="d-flex gap-2">
+            <button class="btn btn-success" onclick="updateEnergy('feed')">Recargar ♻️</button>
+            <button class="btn btn-warning" onclick="updateEnergy('play')">Disparar 😊</button>
+        </div>
+    </div>
+
+    <script>
+        function updateEnergy(action) {
+            fetch('/game/update', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ action: action })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Actualizar el nivel de energía en la interfaz
+                document.getElementById('energyLevel').innerText = 'Número de balas: ' + data.energyLevel + ' ⚡️';
+            })
+            .catch(error => console.error('Error al actualizar:', error));
+        }
+    </script>
+
+<% } else { %>
+    <p>No hay ningún Arma seleccionada.</p>
+    <a href="/characters">Seleccionar Arma</a>
+<% } %>

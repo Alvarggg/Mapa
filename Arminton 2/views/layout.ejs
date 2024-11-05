@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arminton</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <% if (typeof loadFormCss !== 'undefined' && loadFormCss) { %>
+        <link rel="stylesheet" href="/css/form.css">
+    <% } %>
+
+    <% if (typeof loadTableCss !== 'undefined' && loadTableCss) { %>
+        <link rel="stylesheet" href="/css/table.css">
+    <% } %>
+
+    <% if (typeof loadIndexCss !== 'undefined' && loadIndexCss) { %>
+        <link rel="stylesheet" href="/css/index.css">
+    <% } %>
+
+    <% if (typeof loadAboutCss !== 'undefined' && loadAboutCss) { %>
+        <link rel="stylesheet" href="/css/about.css">
+    <% } %>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Arminton
+        </div>
+        <% if (typeof page === 'undefined' || (page !== 'login' && page !== 'register')) { %> <!-- Verificar si page está definido -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Símbolo del menú hamburguesa -->
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="sound-button" href="/characters">Armas</a></li>
+                <li><a class="sound-button" href="/players">Jugadores</a></li>
+                <li><a class="sound-button" href="/game">Jugar</a></li>
+               
+
+                <% if (session && session.isAdmin) { %>
+                    <li><a href="/admin">Admininstación</a></li>
+                <% } %>
+
+                <% if (!session.userId) { %>
+                    <li><a href="/login">Iniciar sesión</a></li>
+                <% } else { %>
+                    <li><a href="/logout">Cerrar sesión</a></li>
+                <% } %>
+            </ul>
+        </nav>
+        <% } %>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    
+    </script>
+    
+    <%- body %>
+
+    <script src="/js/script.js" defer></script> 
+</body>
+</html>

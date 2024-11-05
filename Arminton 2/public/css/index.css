@@ -1,0 +1,114 @@
+/* Fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* Estilos generales para la lista de personajes */
+.character-list {
+    list-style: none; /* Eliminar puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Disposición en columna */
+    align-items: center;
+    font-family: 'Audiowide', sans-serif; /* Fuente futurista */
+}
+
+/* Estilo de cada elemento de la lista */
+.character-item {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.4); /* Sombra con color vibrante */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Ajuste de ancho */
+    max-width: 800px;
+}
+
+/* Estilo del nombre del personaje */
+.character-name {
+    padding-bottom: 10px;
+    font-size: 1.5em; /* Tamaño de fuente incrementado */
+    color: #00ffcc; /* Color vibrante */
+}
+
+/* Agrupar los botones */
+.button-group {
+    display: flex;
+    gap: 20px; /* Espaciado entre botones */
+}
+
+/* Estilo de los botones */
+.create-button, .edit-button, .delete-button, .select-button {
+    background-color: #00ffcc; /* Color de fondo futurista */
+    color: #222; /* Texto oscuro */
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    flex: 1;
+    font-size: 18px;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Sombras vibrantes */
+}
+
+/* Estilo del botón de crear */
+.create-button {
+    background-color: #00bfa5;
+    margin-bottom: 50px;
+}
+
+.create-button:hover {
+    background-color: #00ffcc;
+}
+
+/* Estilo del botón de editar */
+.edit-button {
+    background-color: #ffa952; /* Color más cálido para editar */
+    font-family: 'Audiowide', sans-serif;
+}
+
+.edit-button:hover {
+    background-color: #ffc773;
+}
+
+/* Estilo del botón de eliminar */
+.delete-button {
+    background-color: #ff3f34; /* Rojo intenso para eliminar */
+    font-family: 'Audiowide', sans-serif;
+}
+
+.delete-button:hover {
+    background-color: #ff6b6b; /* Color más suave al hover */
+}
+
+/* Estilo del botón de seleccionar */
+.select-button {
+    background-color: #586602; /* Verde para selección */
+}
+
+.select-button:hover {
+    background-color: #8d9a03;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .character-item {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: stretch;
+        width: 60%;
+        padding: 15px;
+    }
+
+    .button-group {
+        flex-direction: column; /* Disposición en columna para móviles */
+        gap: 10px;
+    }
+
+    /* Aumentar el tamaño de fuente en móviles */
+    .create-button, .edit-button, .delete-button, .select-button {
+        font-size: 16px;
+    }
+}

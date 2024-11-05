@@ -1,0 +1,35 @@
+<h1>Jugadores</h1>
+
+  <!-- Botón para ir al mapa -->
+  
+
+
+
+<!-- Tabla de usuarios -->
+<h2>Usuarios Registrados</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(user => { %>
+            <tr>
+                <td data-label="Username"><%= user.username %></td>
+                <td data-label="Estado">
+                    <% if (user.isConnected) { %>
+                        <span style="color: blue;">Conectado</span>
+                    <% } else { %>
+                        <% if (user.lastLogin) { %>
+                            Última vez conectado: <%= new Date(user.lastLogin).toLocaleString() %>
+                        <% } else { %>
+                            <span style="color: red;">Nunca se ha conectado</span>
+                        <% } %>
+                    <% } %>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
