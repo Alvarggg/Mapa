@@ -33,7 +33,7 @@ Documentación: Socket.IO
 # Instalacion
 ```bash
 git clone https://github.com/Alvarggg/Mapa.git
-cd arminton
+cd arminton 2
 ```
 instalar las dependencias
 ```bash
